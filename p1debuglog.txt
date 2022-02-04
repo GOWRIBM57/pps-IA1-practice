@@ -1,0 +1,35 @@
+Breakpoint 1, main () at p1final.c:16
+16  {
+(gdb) n
+18    input(&a,&b);
+(gdb) s
+input (a=0x7ffddeeceeec, b=0x7ffddeeceef0) at p1final.c:4
+4     printf("Enter the number:");
+(gdb) n
+5     scanf("%d %d",a,b);
+(gdb) n
+Enter the number:5
+7
+6   }
+(gdb) n
+main () at p1final.c:19
+19    add(a,b,&c);
+(gdb) s
+add (a=5, b=7, c=0x7ffddeeceef4) at p1final.c:9
+9     *c=a+b;
+(gdb) n
+10  } 
+(gdb) n
+main () at p1final.c:20
+20    output(a,b,c);
+(gdb) s
+output (a=5, b=7, c=12) at p1final.c:13
+13    printf("sum of %d and %d is %d",a,b,c);
+(gdb) n
+14  }
+(gdb) n
+main () at p1final.c:21
+21    return 0;
+(gdb) n
+22  }
+(gdb) 
